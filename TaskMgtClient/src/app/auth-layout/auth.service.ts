@@ -1,8 +1,9 @@
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { AppConfiguration } from "read-appsettings-json";
 import { Observable, catchError, tap, throwError, map } from "rxjs";
 
-const url = 'https://localhost:44345/api/users/';
+const url = AppConfiguration.Setting().baseUrl + 'users/';
 
 @Injectable({
   providedIn: 'root'

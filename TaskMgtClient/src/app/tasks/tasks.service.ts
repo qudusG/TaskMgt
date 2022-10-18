@@ -3,12 +3,13 @@ import { Injectable } from "@angular/core";
 import { Observable, catchError, tap, throwError, map } from "rxjs";
 import { IUser } from "../create-task/user";
 import { ITask } from "./tasks";
+import { AppConfiguration } from "read-appsettings-json";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
-  private taskUrl = 'https://localhost:44345/api/';
+  private taskUrl = AppConfiguration.Setting().baseUrl;
 
   constructor(private http: HttpClient) { }
 

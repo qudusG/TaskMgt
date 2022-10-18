@@ -49,7 +49,12 @@ namespace TaskManagement.Controllers
             };
             var result = await _userManager.CreateAsync(user, createUser.Password);
             if (result.Succeeded)
-                return Ok(new { Message = "User created successfully." });
+            {
+                var loginResult = await _signInManager.CheckPasswordSignInAsync(user, createUser.Password, lockoutOnFailure: false);
+                if (loginResult.Succeeded)
+                    return Ok(new { token = await GenerateJWT(user), id = user.Id });
+                return BadRequest(new { Message = "User created but login failed." });
+            }
             return BadRequest(new { Message = "Failed to create user." });
         }
         [HttpPost("Login")]

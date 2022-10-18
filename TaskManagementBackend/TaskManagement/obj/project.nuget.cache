@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2V8wNVJjsPn/yZVNl2FACOxyC9muQBF9w6UMTmCybRY3PGeITbyqBP1RwcDUrQHo2nR60MZPD3CKsWU4HU71cA==",
+  "dgSpecHash": "EoOYH0U71heDfPgmkcNvBk7z8/eS6ne1mj99tRcYFyWGQ7Ht1A+ahIypsBSQldYJQh8LJun0RLmOtOxpp9cpwA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\qudus\\Desktop\\TaskManagement\\TaskManagement\\TaskManagement.csproj",
+  "projectFilePath": "C:\\Users\\qudus\\Desktop\\TaskMgt\\TaskManagementBackend\\TaskManagement\\TaskManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\qudus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\qudus\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.14\\microsoft.aspnetcore.authentication.jwtbearer.5.0.14.nupkg.sha512",

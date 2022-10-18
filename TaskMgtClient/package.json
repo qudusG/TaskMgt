@@ -27,6 +27,7 @@
     "ngx-clipboard": "15.0.1",
     "ngx-toastr": "14.2.2",
     "nouislider": "15.5.1",
+    "read-appsettings-json": "^1.0.98",
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.5.0",
     "tslib": "^2.3.0",

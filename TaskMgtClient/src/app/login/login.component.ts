@@ -34,7 +34,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
-      this.roles = this.tokenStorage.getUser().roles;
     }
   }
 
@@ -53,9 +52,6 @@ export class LoginComponent implements OnInit {
           text: '',
           icon: 'success'
         })
-        this.isLoginFailed = false;
-        this.isLoggedIn = true;
-        this.roles = this.tokenStorage.getUser().roles;
         this.router.navigate(['/tasks']);
       },
       error: err => {
