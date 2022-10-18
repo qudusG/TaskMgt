@@ -1,0 +1,50 @@
+<div class="container-fluid mt--15">
+
+
+    <form [formGroup]="CreateTask" (submit)="submitForm()">
+        <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+            <input type="text" class="form-control" formControlName="title"  placeholder="Title">
+            </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-6">
+            <textarea class="form-control" formControlName="description" rows="2" placeholder="Description..."></textarea>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+            <input type="date" formControlName="date" class="form-control" placeholder="Required date">
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Type</label>
+                        <select class="form-control" formControlName="type">
+                            <option value="0">Internal</option>
+                            <option value="1">External</option>
+                        </select>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Assignee</label>
+                        <select formControlName="assignee" class="form-control">
+                            <option value="default">----</option>
+                            <option *ngFor="let user of users" [value]="user.id">
+                                {{user.name}}
+                            </option>
+                        </select>
+                    </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" [disabled]="CreateTask.invalid" type="submit">Create Task</button>
+    </form>
+</div>
